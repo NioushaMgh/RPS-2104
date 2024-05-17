@@ -52,50 +52,54 @@ h1{
   font-family: 'Bold';
 }
 
-
-.ellipse {
-  position: absolute;
-  margin-top: 300px;
-  margin-left: -160px;
-  height: 50px;
-  size: 50px;
-}
-
-input[type="radio"] {
-  display: none; 
-}
-
-input[type="radio"] + label {
-  cursor: pointer; 
-  display: inline-block;
-  width: 50px; 
-  height: 50px; 
-  background-color: var(--orange);
-  border-radius: 50%; 
-  position: relative;
-  margin-top: 10px; 
-}
-
-input[type="radio"]:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  width: 20px;
-  height: 20px; 
-  background-color: white; 
-  border-radius: 50%; 
-}
-
-#startButton {
-  background-color: var(--blueGradiant);
+#playerImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+}
+#playerImages img {
+  width: 100px;
+  height: 100px;
+}
+
+#playerImages .ellipse {
+  width: 50px;
+  height: 50px;
+  margin-left: -80px;
+  position: absolute;
+  margin-top: 170px;
+}
+
+
+#playerImages .p1{
+  background-color: #5C4CAB;
+  width: 150px;
+  height: 116px;
+}
+
+#playerImages .p2{
+  background-color: #7A2773;
+  width: 150px;
+  height: 116px;
+}
+
+.startButton{
+  color: white;
+  background-color: var(--blueGradiant);
+  font-family: 'Bold';
+  margin-left: 660px;
+  margin-top: 30px;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.scoreboard{
+  font-family: 'Bold';
+  font-size: 36px;
+}
+
+#playerChoices{
   color: white;
   font-family: 'Bold';
-  width: 252px;
-  height: 64px;
-  font-size: 36px;
-  border-color: white;
+  text-align: center;
 }
-

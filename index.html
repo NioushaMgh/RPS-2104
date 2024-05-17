@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- font-family: 'Cinzel', serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <!-- font-family: 'Courgette', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Courgette&display=swap" rel="stylesheet">
+    <!-- Confetti JS -->
+    <script src="confetti-js-master/src/confetti.js"></script>
     <!-- styles -->
-    <link rel="stylesheet" href="./style/style.css" />
-    <!-- insert bootstrap link -->
+    <link rel="stylesheet" href="./style/style.css" />        
     <!-- title -->
     <title>Rock Paper Scissor</title>
-  </head>
-  <body>
-    <!-- scripts -->
-    <script src="./script/main.js"></script>
-  </body>
+</head>
+<body>
+  <h1 id="message">Rock Paper Scissors</h1> 
+    <!-- Scoreboard -->
+    <center class="scoreboard" id="Scoreboard">
+      <p class="name">You</p><p class="score" id="player1">0</p>
+      <h6 class="semi"> : </h6>
+      <p class="name">Ai</p><p class="score" id="computer1">0</p>  
+  </center>
+  
+    <!-- Moves Left/display -->
+    <center>
+      <div class="container">
+          <h1 id="computerChoice">Your Turn!</h1>
+      </div>
+  </center>
+    <!-- Rock Paper Scissors -->
+    <div class="container my-4 my-lg-5" id="n3">
+      <form id="gameForm">
+        <div class="row justify-content-center">
+          <div class="col-auto text-center">
+            <img src="./assets/images/paper 1.png" alt="">
+            <br>
+            <input type="radio" name="choice" id="paper" value="paper" disabled>
+            <label for="paper"></label>
+          </div>
+          <div class="col-auto text-center">
+            <img src="./assets/images/two 1.png" alt="">
+            <br>
+            <input type="radio" name="choice" id="scissors" value="scissors" disabled> 
+            <label for="scissors"></label>
+          </div>
+          <div class="col-auto text-center">
+            <img src="./assets/images/rock 1.png" alt="">
+            <br>
+            <input type="radio" name="choice" id="rock" value="rock" disabled> 
+            <label for="rock"></label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Start/Play Again Button -->
+    <div class="container my-4 my-lg-5 text-center" id="startButtonContainer">
+      <button type="button" class="btn btn-primary" id="startButton" onclick="startGame()">Start</button>
+  </div>
+  
+    <!-- Javascript file -->
+    <script src="script/main.js"></script>
+</body>
 </html>

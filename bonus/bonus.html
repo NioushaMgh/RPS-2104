@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Courgette&display=swap" rel="stylesheet">
+    <!-- Confetti JS -->
+    <script src="confetti-js-master/src/confetti.js"></script>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Custom Fonts -->
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <h1 id="message">Rock Paper Scissors</h1>
+    <!-- Moves Left/display -->
+    <center class="scoreboard" id="Scoreboard">
+        <p class="name">Player 1 ---</p><p class="score" id="player1">0</p>
+        <h6 class="semi"> : </h6>
+        <p class="name">Player 2 ---</p><p class="score" id="player2">0</p>
+    </center>
+
+    <!-- Start button -->
+    <button id="startButton" class="startButton">START</button>
+    <!-- Add a section to display players' choices -->
+    <div id="playerChoices">
+      <p id="player1Choice">Player 1 choice: </p>
+      <p id="player2Choice">Player 2 choice: </p>
+    </div>
+
+    <!-- Rock Paper Scissors for Players -->
+    <div class="container my-4 my-lg-5">
+        <div class="row justify-content-center" id="playerImages">
+            <div class="col-auto text-center p1">
+              <button type="button" class="btn" id="b_rock1" onclick="playRound('rock', 1)">
+                    <img src="./assets/images/paper 1.png" alt="">
+                </button>
+            </div>
+            <div class="col-auto text-center p1">
+                <button type="button" class="btn" id="bscissor1" onclick="playRound('scissors', 1)">
+                    <img src="./assets/images/two 1.png" alt="">
+                </button>
+            </div>
+            <div class="col-auto text-center p1">
+                <button type="button" class="btn" id="brock1" onclick="playRound('rock', 1)">
+                    <img src="./assets/images/rock 1.png" alt="">
+                </button>
+            </div>
+            <div class="col-auto text-center p2">
+                <button type="button" class="btn" id="bpaper2" onclick="playRound('paper', 2)">
+                    <img src="./assets/images/paper 1.png" alt="">
+                </button>
+            </div>
+            <div class="col-auto text-center p2">
+                <button type="button" class="btn" id="bscissor2" onclick="playRound('scissors', 2)">
+                    <img src="./assets/images/two 1.png" alt="">
+                </button>
+            </div>
+            <div class="col-auto text-center p2">
+                <button type="button" class="btn" id="brock2" onclick="playRound('rock', 2)">
+                    <img src="./assets/images/rock 1.png" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Javascript file -->
+    <script src="script/main.js"></script>
+</body>
+</html>
